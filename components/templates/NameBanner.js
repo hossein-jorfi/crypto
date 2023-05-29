@@ -8,22 +8,17 @@ const NameBanner = ({ name, symbol, slug }) => {
      const [icon, setIcon] = useState('')
 
 
-     // useEffect(() => {
-     //      fetch(`https://api.coingecko.com/api/v3/coins/${slug}`)
-     //           .then(res => res.json())
-     //           .then(res => setIcon(res.image.small))
-     // }, [])
+     useEffect(() => {
+          fetch(`https://api.coingecko.com/api/v3/coins/${slug}`)
+               .then(res => res.json())
+               .then(res => setIcon(res.image.small))
+     }, [])
 
      return (
           <div className={`${styles.main} d-flex justify-content-between align-items-center`}>
                <div className='d-flex align-items-center'>
-                    <Image
-                         src={Btc}
-                         width='48'
-                         height='48'
-                         alt={`${name} icon`}
-                    />
-                    {/* {
+                    {/* <Image src={Btc} width='48' height='48' alt={`${name} icon`} /> */}
+                    {
                          icon ? <Image
                               loader={() => icon} src={icon}
                               width='48'
@@ -32,7 +27,7 @@ const NameBanner = ({ name, symbol, slug }) => {
                          />
                               :
                               <span></span>
-                    } */}
+                    }
                     <div className='d-flex flex-column flex-md-row me-2'>
                          <span className={`${styles.name} p-0 m-0`}>
                               {name} Price
