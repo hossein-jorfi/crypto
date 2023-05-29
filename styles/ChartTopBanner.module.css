@@ -1,0 +1,51 @@
+.main {
+     direction: ltr;
+}
+
+.price {
+     color: rgb(0, 13, 29);
+     font-size: 36px;
+     margin-right: 8px;
+     margin-bottom: 0;
+}
+
+.percent {
+     color: rgb(1, 188, 141);
+     font-size: 24px;
+}
+
+.times {
+     width: 200px;
+     display: flex;
+     justify-content: space-between;
+}
+
+.time {
+     color: rgba(0, 13, 29, 0.4);
+     font-size: 14px;
+     cursor: pointer;
+}
+
+.active__time {
+     color: rgb(0, 13, 29);
+}
+
+.day {
+     font-size: 16px;
+     color: rgba(0, 13, 29, 0.4);
+     margin-left: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+     .price {
+          font-size: 24px;
+     }
+
+     .times {
+          margin-bottom: 1rem;
+     }
+
+     .time {
+          font-size: 12px;
+     }
+}

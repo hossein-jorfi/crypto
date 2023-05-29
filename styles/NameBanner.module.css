@@ -1,0 +1,48 @@
+.main {
+  direction: ltr;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 500;
+  color: rgb(0, 13, 29);
+  /* margin-left: 10px !important; */
+}
+
+.stand {
+  font-size: 20px;
+  color: rgba(0, 13, 29, 0.4);
+  padding-top: 2px !important;
+}
+
+.select {
+  position: relative;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease 0s;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 12px;
+  color: rgb(0, 13, 29);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0px 12px;
+  height: 32px;
+  background: rgba(0, 13, 29, 0.04);
+}
+
+.select:focus {
+  box-shadow: rgb(1, 188, 141) 0px 0px 0px 1px inset;
+  opacity: 0.5;
+}
+
+
+@media only screen and (max-width: 765px) {
+  .name {
+    font-size: 18px;
+  }
+  .stand {
+    padding-top: 0 !important;
+    font-size: 14px;
+  }
+}
