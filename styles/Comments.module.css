@@ -1,0 +1,83 @@
+.main {
+  border: 1px solid rgba(0, 13, 29, 0.08);
+  border-radius: 12px 12px 0 0;
+  padding: 16px 24px 10px;
+  margin-top: 15px;
+}
+
+.commentsContainer {
+  border: 1px solid rgba(0, 13, 29, 0.08);
+  border-top: 0;
+  border-radius: 0 0 12px 12px;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.comment {
+  border-bottom: 1px solid rgba(0, 13, 29, 0.08);
+  padding: 24px 24px 12px;
+  background: rgba(0, 13, 29, 0.02);
+}
+
+.commentsContainer::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 5px;
+}
+
+.commentsContainer::-webkit-scrollbar-thumb {
+  background: #d6d6d6;
+}
+
+.name {
+
+}
+
+.areaText {
+  color: rgba(0, 13, 29, 0.6);
+  font-size: 14px;
+}
+
+.input {
+  width: 100%;
+  height: 35px;
+  font-size: 14px;
+  margin-top: 24px;
+  padding: 8px 12px;
+  border: none;
+  outline: red;
+  border-radius: 4px;
+  background: rgba(0, 13, 29, 0.04);
+}
+
+.button {
+  font-weight: 100 !important;
+  margin-right: 10px;
+  outline: none;
+  border-radius: 4px;
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background: rgb(1, 188, 141);
+  width: fit-content;
+  outline: none;
+  border: none;
+  height: 35px;
+}
+
+.textArea {
+  margin-top: 15px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 26px;
+  height: 72px;
+  background: rgba(0, 13, 29, 0.04);
+  border-radius: 4px;
+  border: none;
+  resize: none;
+  padding: 8px 12px !important;
+}
+
+@media only screen and (max-width: 993px) {
+}

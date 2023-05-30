@@ -2,7 +2,7 @@ import Chart from '@/components/modules/Chart';
 import AboutCoin from '@/components/templates/AboutCoin';
 import ChartTopBanner from '@/components/templates/ChartTopBanner';
 import Convert from '@/components/templates/Convert';
-import LeaderBoard from '@/components/templates/LeaderBoard';
+import Comments from '@/components/templates/Comments';
 import NameBanner from '@/components/templates/NameBanner';
 import SecendBanner from '@/components/templates/SecendBanner';
 import { useEffect, useState } from 'react';
@@ -23,7 +23,8 @@ const coinName = ({ data: { data }, query }) => {
                </div>
                <div className='col-12 col-lg-3 p-0 p-lg-3'>
                     <Convert {...data[coin_name]} />
-                    <LeaderBoard />
+                    <Comments />
+                    <br /><br /><br />
                </div>
           </div>
      );
