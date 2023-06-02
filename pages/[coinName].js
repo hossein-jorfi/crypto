@@ -18,7 +18,7 @@ const coinName = ({ data: { data }, query }) => {
                <div className='col-12 col-lg-9 p-0 p-lg-3'>
                     <NameBanner {...data[coin_name]} />
                     <ChartTopBanner {...data[coin_name]} />
-                    {/* <Chart coinName={coin_name} /> */}
+                    <Chart coinName={coin_name} />
                     <SecendBanner data={quote.USD} />
                     <AboutCoin {...data[coin_name]} />
                     <div className='d-none d-lg-block mt-5'>
