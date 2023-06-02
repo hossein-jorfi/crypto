@@ -1,0 +1,19 @@
+.line {
+     display: block;
+     width: 100%;
+     height: 2px;
+     border-radius: 15px;
+     /* background: rgb(1, 188, 141); */
+     background: #f6b71d;
+}
+
+.cardContainer {
+     margin: 0;
+}
+
+.card {
+     border: 1px solid #e0e0e0;
+     height: 200px;
+     padding: 30px;
+     border-radius: 15px;
+}

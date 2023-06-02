@@ -3,7 +3,7 @@ import styles from '../../styles/ChartTopBanner.module.css'
 import { formatPrice } from '@/utils/helpers';
 
 const ChartTopBanner = ({ quote }) => {
-     console.log(quote.USD.percent_change_24h);
+     
      return (
           <div className={`${styles.main} my-4 d-flex align-items-baseline`}>
                <h2 className={styles.price}>$ {formatPrice(quote.USD.price)}</h2>

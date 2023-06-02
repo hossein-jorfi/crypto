@@ -5,6 +5,7 @@ import Convert from '@/components/templates/Convert';
 import Comments from '@/components/templates/Comments';
 import NameBanner from '@/components/templates/NameBanner';
 import SecendBanner from '@/components/templates/SecendBanner';
+import Article from '@/components/templates/Article';
 import { useEffect, useState } from 'react';
 
 const coinName = ({ data: { data }, query }) => {
@@ -13,17 +14,23 @@ const coinName = ({ data: { data }, query }) => {
      const quote = data[coin_name].quote
 
      return (
-          <div className='container-xxl mt-5 row' style={{ margin: '0 auto' }}>
+          <div className='container-xxl row' style={{ margin: '5rem auto' }}>
                <div className='col-12 col-lg-9 p-0 p-lg-3'>
                     <NameBanner {...data[coin_name]} />
                     <ChartTopBanner {...data[coin_name]} />
-                    <Chart coinName={coin_name} />
+                    {/* <Chart coinName={coin_name} /> */}
                     <SecendBanner data={quote.USD} />
                     <AboutCoin {...data[coin_name]} />
+                    <div className='d-none d-lg-block mt-5'>
+                         <Article />
+                    </div>
                </div>
                <div className='col-12 col-lg-3 p-0 p-lg-3'>
                     <Convert {...data[coin_name]} />
                     <Comments />
+                    <div className='d-block d-lg-none mt-5'>
+                         <Article />
+                    </div>
                     <br /><br /><br />
                </div>
           </div>

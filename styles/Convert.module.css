@@ -18,7 +18,7 @@
   height: 2px;
   bottom: -5px;
   width: 100%;
-  background: rgb(1, 188, 141);
+  background: #F8B920;
   transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
@@ -33,7 +33,6 @@
   margin-top: 24px;
   padding: 8px 12px;
   border: none;
-  outline: rgb(1, 188, 141);
   border-radius: 4px;
   background: rgba(0, 13, 29, 0.04);
 }
@@ -48,7 +47,7 @@
   text-align: center;
   font-weight: 500;
   color: rgb(255, 255, 255);
-  background: rgb(1, 188, 141);
+  background: #f6b71d;
   border: none;
 }
 
