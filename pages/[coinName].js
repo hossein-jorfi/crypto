@@ -8,8 +8,7 @@ import SecendBanner from '@/components/templates/SecendBanner';
 import Article from '@/components/templates/Article';
 import { useEffect, useState } from 'react';
 
-const coinName = ({ data: { data }, query }) => {
-     console.log(data);
+const coinName = ({ data: { data }, query, blogDataTwo }) => {
      const coin_name = query.coinName.toUpperCase()
      const quote = data[coin_name].quote
 
@@ -18,7 +17,7 @@ const coinName = ({ data: { data }, query }) => {
                <div className='col-12 col-lg-9 p-0 p-lg-3'>
                     <NameBanner {...data[coin_name]} />
                     <ChartTopBanner {...data[coin_name]} />
-                    <Chart coinName={coin_name} />
+                    {/* <Chart coinName={coin_name} /> */}
                     <SecendBanner data={quote.USD} />
                     <AboutCoin {...data[coin_name]} />
                     <div className='d-none d-lg-block mt-5'>

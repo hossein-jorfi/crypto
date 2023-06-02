@@ -13,7 +13,30 @@
 
 .card {
      border: 1px solid #e0e0e0;
-     height: 200px;
-     padding: 30px;
+     min-height: 300px;
+     padding: 20px;
      border-radius: 15px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.card:hover {
+     border: 1px solid #f6b71d;
+}
+
+.link {
+     text-decoration: none;
+     background-color: #f6b71d;
+     border: 1px solid #f6b71d;
+     color: #fff;
+     padding: 8px;
+     border-radius: 5px;
+}
+
+.link:hover {
+     color: #f6b71d;
+     background-color: inherit;
+     border: 1px solid #f6b71d;
 }
