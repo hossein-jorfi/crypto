@@ -32,7 +32,7 @@ const Article = () => {
                                              <Image
                                                   unoptimized
                                                   alt='article image'
-                                                  loader={() => item._embedded['wp:featuredmedia']['0'].source_url}
+                                                  // loader={() => item._embedded['wp:featuredmedia']['0'].source_url}
                                                   src={item._embedded['wp:featuredmedia']['0'].source_url}
                                                   width='150'
                                                   height='100'
