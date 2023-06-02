@@ -11,8 +11,8 @@ const SecendBanner = ({ data }) => {
                     <span className={styles.line}></span>
                </div>
                <span className={styles.descreption}>
-                    Bitcoin (BTC) Price Movements
                     <span>{'($)'}</span>
+                    Bitcoin (BTC) Price Movements
                </span>
                <div className={styles.tableContainer}>
                     <div className={styles.table__head}>

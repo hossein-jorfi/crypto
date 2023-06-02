@@ -1,0 +1,9 @@
+.name {
+     text-decoration: none;
+     color: rgb(102, 102, 102);
+     cursor: pointer;
+}
+
+.name:hover {
+     color: #0059ff;
+}

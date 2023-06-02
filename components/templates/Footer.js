@@ -1,6 +1,7 @@
 import styles from '../../styles/Footer.module.css'
 import Logo from '../../public/LOGO.png'
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Footer = () => {
      return (
@@ -29,6 +30,10 @@ const Footer = () => {
                               <span>دسترسی</span>
                          </div>
                     </div>
+               </div>
+               <div></div>
+               <div className='farsi d-flex justify-content-center'>
+                    <Link href='https://github.com/hossein-jorfi/' className={styles.name}>توسعه حیسن جرفی</Link>
                </div>
           </footer>
      );
