@@ -1,7 +1,18 @@
+.nameCon {
+     background-color: rgb(231, 231, 231);
+     padding: 10px 0;
+}
+
 .name {
      text-decoration: none;
      color: rgb(102, 102, 102);
      cursor: pointer;
+}
+
+.github {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-weight: 600;
+     letter-spacing: 1px;
 }
 
 .name:hover {

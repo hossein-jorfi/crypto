@@ -8,8 +8,8 @@ const Convert = ({ symbol, quote: { USD } }) => {
 
      const [dollorPrice, setDollarPrice] = useState(0);
 
-     const [coinCount, setCoinCount] = useState(0);
-     const [toman, setToman] = useState(0);
+     const [coinCount, setCoinCount] = useState('');
+     const [toman, setToman] = useState('');
 
      useEffect(() => {
           const fetchDollerPrice = async () => {
@@ -46,20 +46,30 @@ const Convert = ({ symbol, quote: { USD } }) => {
                     {
                          dollorPrice ?
                               <>
-                                   <input
-                                        ref={refC}
-                                        onChange={coinCountHandler}
-                                        value={coinCount}
-                                        type="text"
-                                        className={styles.input}
-                                   />
-                                   <input
-                                        ref={refT}
-                                        onChange={tomanHandler}
-                                        value={toman}
-                                        type="text"
-                                        className={`${styles.input} farsi`}
-                                   />
+                                   <div className={styles.inputContainer}>
+                                        <input
+                                             ref={refC}
+                                             onChange={coinCountHandler}
+                                             value={coinCount}
+                                             type="text"
+                                             className={styles.input}
+                                             placeholder='0.00'
+                                        />
+                                        <span className={styles.symbol}>
+                                             {symbol}
+                                        </span>
+                                   </div>
+                                   <div className={styles.inputContainer}>
+                                        <input
+                                             ref={refT}
+                                             onChange={tomanHandler}
+                                             value={toman}
+                                             type="text"
+                                             className={`${styles.input} farsi`}
+                                             placeholder='0.00'
+                                        />
+                                        <span className={`${styles.symbol} farsi`}>تومن</span>
+                                   </div>
                               </>
                               :
                               <span className='farsi'>در حال دانلود...</span>

@@ -8,7 +8,7 @@ const Footer = () => {
           <footer className='bg-light'>
                <div className='container-xxl p-5'>
                     <div>
-                         <Image src={Logo} alt='Finobit Logo' width='40' height='40' />
+                         <Image src={Logo} alt='Finobit Logo' height='40' />
                     </div>
                     <div className='farsi mt-3 d-flex flex-wrap w-100 w-sm-50 justify-content-between'>
                          <div>
@@ -32,8 +32,10 @@ const Footer = () => {
                     </div>
                </div>
                <div></div>
-               <div className='farsi d-flex justify-content-center'>
-                    <Link href='https://github.com/hossein-jorfi/' className={styles.name}>توسعه حیسن جرفی</Link>
+               <div className={`${styles.nameCon} farsi d-flex justify-content-center`}>
+                    <Link href='https://github.com/hossein-jorfi/' className={styles.name}>
+                         توسعه حیسن جرفی | <span className={styles.github}>Github</span>
+                         </Link>
                </div>
           </footer>
      );

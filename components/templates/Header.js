@@ -22,7 +22,12 @@ const Header = () => {
           <nav className="navbar bg-body-tertiary fixed-top mb-5 bg-light">
                <div className="container-xxl d-flex justify-content-between justify-content-sm-start">
                     <a className="navbar-brand" href="#">
-                         <Image src={Logo} alt='Finobit Logo' width='40' height='40' />
+                         <Image
+                              src={Logo}
+                              alt='Finobit Logo'
+                              className={styles.image}
+                              height='40'
+                         />
                     </a>
                     <div className='farsi w-50 d-none d-sm-flex ms-1'>
                          {items.map(item =>
@@ -46,9 +51,9 @@ const Header = () => {
                               width='24'
                               height='24'
                          />
-                         <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                         <div className={`${styles.mobCon} offcanvas offcanvas-end`} tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                               <div className="offcanvas-header">
-                                   <Image src={Logo} alt='Finobit Logo' width='40' height='40' />
+                                   <Image src={Logo} alt='Finobit Logo' height='40' />
                                    <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                               </div>
                               <div className="offcanvas-body farsi">

@@ -1,20 +1,34 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-const index = () => {
+const index = ({ data2 }) => {
 
-  // const [variableNameTwo, setVariableNameTwo] = useState([]);
+  console.log(data2);
+
+  const data = JSON.stringify({
+    post: 5726,
+    author_name: 'developer test',
+    author_email: 'developer@gmail.com',
+    content: 'testtestest',
+  });
+
+  useEffect(() => {
+    fetch('https://academy.finobit.io/index.php/wp-json/wp/v2/comments?post=4760')
+      .then(res => res.json())
+      .then(res2 => console.log(res2))
+  })
+
   // useEffect(() => {
-  //   // setLoading(true);
-  //   const fetchBlogData = async () => {
-  //     const blgData = await fetch(
-  //       'https://academy.finobit.io/wp-json/wp/v2/posts?_embed&order=desc&status=publish'
-  //     );
-  //     const blgJsnData = await blgData.json();
-  //     console.log(blgJsnData);
-  //   };
-  //   fetchBlogData();
-  // }, []);
+  //   fetch('https://academy.finobit.io/index.php/wp-json/wp/v2/comments', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: data,
+  //   })
+  //     .then(res => res.json())
+  //     .then(res2 => console.log(res2))
+  // }, [])
 
   return (
     <div className='container'>
@@ -25,12 +39,26 @@ const index = () => {
 
 export default index;
 
-// export const getServerSideProps = async () => {
-//   const variableName = await fetch('https://academy.finobit.io/wp-json/wp/v2/posts')
-//   const variableNameTwo = await variableName.json()
-//   return {
-//     props: {
-//       variableNameTwo,
-//     }
-//   }
-// }
+export async function getServerSideProps() {
+
+  const parameters = {
+    convert: 'USD'
+  };
+  const headers = {
+    Accepts: 'application/json',
+    'X-CMC_PRO_API_KEY': process.env.COINMARKET_API_KEY
+  };
+
+
+  const res = await fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
+    method: 'GET',
+    headers: headers
+  })
+  const data2 = await res.json()
+
+  return {
+    props: {
+      data2
+    }
+  }
+}

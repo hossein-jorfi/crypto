@@ -13,7 +13,6 @@ const Article = () => {
                     'https://academy.finobit.io/index.php/wp-json/wp/v2/posts?_embed'
                );
                const blgJsnData = await blgData.json();
-               console.log(blgJsnData);
                setData(blgJsnData);
           };
           fetchBlogData();
@@ -23,14 +22,13 @@ const Article = () => {
           <div className='main farsi'>
                <h3>مقالات مرتبط</h3>
                <span className={styles.line}></span>
-               <div className={`${styles.cardContainer} row pt-5`}>
+               <div className={`${styles.cardContainer} row pt-3`}>
                     {
                          data ?
                               data.map(item =>
                                    <div key={item.id} className='my-2 col-12 col-sm-6 col-md-4'>
                                         <div className={`${styles.card}`}>
                                              <Image
-                                                  unoptimized
                                                   alt='article image'
                                                   // loader={() => item._embedded['wp:featuredmedia']['0'].source_url}
                                                   src={item._embedded['wp:featuredmedia']['0'].source_url}
@@ -42,7 +40,7 @@ const Article = () => {
                                         </div>
                                    </div>
                               )
-                              : 'test'
+                              : <p className='farsi'>در حال گرفتن اطلاعات...</p>
                     }
                </div>
           </div>

@@ -36,14 +36,14 @@ const NameBanner = ({ name, symbol, slug }) => {
                          </span>
                     </div>
                </div>
-               <div>
+               {/* <div>
                     <select name="USD($)" className={styles.select}>
                          <option value="test1">{'USD($)'}</option>
                          <option value="test2">test2</option>
                          <option value="test3">test3</option>
                          <option value="test4">test4</option>
                     </select>
-               </div>
+               </div> */}
           </div>
      );
 };

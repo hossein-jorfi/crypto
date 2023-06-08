@@ -19,6 +19,10 @@
   background: rgba(0, 13, 29, 0.02);
 }
 
+.comment:last-child {
+  border-bottom: 0;
+}
+
 .commentsContainer::-webkit-scrollbar {
   width: 5px;
   border-radius: 5px;
@@ -26,10 +30,6 @@
 
 .commentsContainer::-webkit-scrollbar-thumb {
   background: #d6d6d6;
-}
-
-.name {
-
 }
 
 .areaText {
@@ -59,7 +59,7 @@
   font-size: 14px;
   text-align: center;
   color: rgb(255, 255, 255);
-  background: #F8B920;
+  background: #f8b920;
   width: fit-content;
   outline: none;
   border: none;

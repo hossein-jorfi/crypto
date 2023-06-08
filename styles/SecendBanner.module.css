@@ -46,8 +46,9 @@
   padding: 8px 16px;
 }
 .table__row {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
+  */
   border-radius: 5px;
   padding: 8px 16px;
 }
@@ -57,8 +58,20 @@
   color: rgba(0, 13, 29, 0.4);
 }
 
-.table__row span:nth-child(2) {
-  margin-left: 35px;
+.table__row span:first-child {
+  text-align: right;
+}
+
+.table__row span:last-child {
+  text-align: left;
+}
+
+.table__head span:first-child {
+  text-align: right;
+}
+
+.table__head span:last-child {
+  text-align: left;
 }
 
 .plus {
