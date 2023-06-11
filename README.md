@@ -1,3 +1,12 @@
+This project was for a real employer
+he wanted the page like https://www.kucoin.com/price/BTC
+if you put a coin symbol in URL endpoint, its show data of the coin like "domain.com/BTC or domain.com/ETH"
+coin data come from coinmarketcap restAPI But it didn't have an icon, so I had to get only the icon from another api
+i get chart from tradingview
+The challenge I faced was that the employer wanted Comments and Articles connect to his wordpress weblog so he can decline or accept comments from wordpress admin panel and in Articles section just fetch Articles related to coin
+in convert section i get toman (iran value) for converting
+every daynamic page is SSR
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
