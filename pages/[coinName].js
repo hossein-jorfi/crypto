@@ -39,7 +39,7 @@ const coinName = ({ data: { data }, query }) => {
                     </div>
                     <div className='col-12 col-lg-3 p-0 p-lg-3'>
                          <Convert {...data[coin_name]} />
-                         <Comments />
+                         <Comments {...data[coin_name]} />
                          <div className='d-block d-lg-none mt-5'>
                               <Article />
                          </div>
