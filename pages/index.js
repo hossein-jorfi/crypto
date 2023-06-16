@@ -1,5 +1,5 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React from "react";
+import { useState, useEffect } from "react";
 
 const index = () => {
   // const data = JSON.stringify({
@@ -22,14 +22,17 @@ const index = () => {
   // }, [])
 
   useEffect(() => {
-    fetch('https://academy.finobit.io/index.php/wp-json/wp/v2/comments?post=6833')
-      .then(res => res.json())
-      .then(res2 => console.log(res2))
-  })
+    fetch(
+      "https://academy.finobit.io/index.php/wp-json/wp/v2/comments?post=6833"
+    )
+      .then((res) => res.json())
+      .then((res2) => console.log(res2));
+  });
 
   return (
-    <div className='container'>
-      <h1 className='container'>test</h1>
+    <div className="container">
+      <h1 className="container">test</h1>
+      
     </div>
   );
 };
