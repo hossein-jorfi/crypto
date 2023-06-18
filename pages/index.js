@@ -32,7 +32,6 @@ const index = () => {
   return (
     <div className="container">
       <h1 className="container">test</h1>
-      
     </div>
   );
 };

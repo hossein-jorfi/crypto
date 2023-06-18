@@ -1,13 +1,10 @@
-import { useState } from 'react';
 import Image from 'next/image';
 import Logo from '../../public/LOGO.png'
 import MenuIcon from '../../public/menu.svg'
 import styles from '../../styles/Header.module.css'
 import Link from 'next/link';
-import styled from 'styled-components';
 
 const Header = () => {
-
      const items = [
           { value: 'خانه', href: '/#' },
           { value: 'وبلاگ', href: '/#' },
@@ -15,11 +12,8 @@ const Header = () => {
           { value: 'دوره ها', href: '/#' },
      ]
 
-     const [click, setClick] = useState(false);
-     const clickHandler = () => setClick(!click);
-
      return (
-          <nav className="navbar bg-body-tertiary fixed-top mb-5 bg-light">
+          <nav className="navbar bg-body-tertiary fixed-top mb-5 bg-light shadow">
                <div className="container-xxl d-flex justify-content-between justify-content-sm-start">
                     <a className="navbar-brand" href="#">
                          <Image
