@@ -6,42 +6,42 @@ const Comments = ({ symbol }) => {
   const [content, setContent] = useState("");
   const [comments, setComments] = useState("");
 
-  const dataToSend = JSON.stringify({
-    post: 6833,
-    author_name: name,
-    author_email: "test@gmail.com",
-    content: `${symbol}*${content}`,
-  });
-  const submitHandler = () => {
-    if (!name || !content) {
-      alert("وارد کردن اسم و متن کامنت الزامی است");
-    } else {
-      fetch("https://academy.finobit.io/index.php/wp-json/wp/v2/comments", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: dataToSend,
-      })
-        .then((res) => res.json())
-        .then((res2) =>
-          alert("کامنت شما با موفقیت ارسال شد و پس از تایید نشان داده میشود")
-        );
-    }
-  };
+  // const dataToSend = JSON.stringify({
+  //   post: 6833,
+  //   author_name: name,
+  //   author_email: "test@gmail.com",
+  //   content: `${symbol}*${content}`,
+  // });
+  // const submitHandler = () => {
+  //   if (!name || !content) {
+  //     alert("وارد کردن اسم و متن کامنت الزامی است");
+  //   } else {
+  //     fetch("https://academy.finobit.io/index.php/wp-json/wp/v2/comments", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: dataToSend,
+  //     })
+  //       .then((res) => res.json())
+  //       .then((res2) =>
+  //         alert("کامنت شما با موفقیت ارسال شد و پس از تایید نشان داده میشود")
+  //       );
+  //   }
+  // };
 
-  useEffect(() => {
-    fetch(
-      "https://academy.finobit.io/index.php/wp-json/wp/v2/comments?post=6833"
-    )
-      .then((res) => res.json())
-      .then((res2) => setComments(res2));
-  }, []);
+  // useEffect(() => {
+  //   fetch(
+  //     "https://academy.finobit.io/index.php/wp-json/wp/v2/comments?post=6833"
+  //   )
+  //     .then((res) => res.json())
+  //     .then((res2) => setComments(res2));
+  // }, []);
 
-  const formatCommentContent = (rendered) => {
-    const result = rendered.replace(/<[^>]+>/g, "").split("*");
-    return result;
-  };
+  // const formatCommentContent = (rendered) => {
+  //   const result = rendered.replace(/<[^>]+>/g, "").split("*");
+  //   return result;
+  // };
 
   return (
     <>
@@ -55,14 +55,14 @@ const Comments = ({ symbol }) => {
             placeholder="اسم"
             className={`${styles.input} farsi m-0`}
           />
-          <button onClick={submitHandler} className={`${styles.button} farsi`}>
+          <button className={`${styles.button} farsi`}>
             ارسال
           </button>
         </div>
         <div>
           <textarea
-            onChange={(e) => setContent(e.target.value)}
-            value={content}
+            // onChange={(e) => setContent(e.target.value)}
+            // value={content}
             maxLength="280"
             className={`${styles.textArea} farsi`}
             placeholder="یه چیزی بنویس..."
