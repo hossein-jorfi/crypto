@@ -1,8 +1,9 @@
 import styles from '../../styles/SecendBanner.module.css'
 import { dollerChange, formatCryptoPrice } from '@/utils/helpers';
 
-const SecendBanner = ({ data }) => {
+const SecendBanner = ({ data, name, symbol }) => {
 
+     console.log(data)     
      const currentValue = data.price;
      return (
           <div className={styles.main}>
@@ -12,7 +13,7 @@ const SecendBanner = ({ data }) => {
                </div>
                <span className={styles.descreption}>
                     <span>{'($)'}</span>
-                    Bitcoin (BTC) Price Movements
+                    {name} ({symbol}) Price Movements
                </span>
                <div className={styles.tableContainer}>
                     <div className={`${styles.table__head} row`}>
