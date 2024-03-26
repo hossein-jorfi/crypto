@@ -3,7 +3,6 @@ import { dollerChange, formatCryptoPrice } from '@/utils/helpers';
 
 const SecendBanner = ({ data, name, symbol }) => {
 
-     console.log(data)     
      const currentValue = data.price;
      return (
           <div className={styles.main}>
